@@ -1,4 +1,5 @@
 import image from '../../img/icon-image-not-found.jpg';
+import PropTypes from 'prop-types';
 import css from './MainInfo.module.css';
 
 export default function MainInfo({ movie }) {
@@ -35,3 +36,14 @@ export default function MainInfo({ movie }) {
     </div>
   );
 }
+
+MainInfo.propTypes = {
+  movies: PropTypes.shape({
+    poster_path: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    vote_average: PropTypes.string.isRequired,
+    overview: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }),
+};

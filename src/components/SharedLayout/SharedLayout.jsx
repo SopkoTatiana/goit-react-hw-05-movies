@@ -3,15 +3,15 @@ import { NavLink, Outlet } from 'react-router-dom';
 import css from './SharedLayout.module.css';
 import styled from 'styled-components';
 
-export default function SharedLayout(params) {
-  const StyledLink = styled(NavLink)`
-    font-size: 20px;
+const StyledLink = styled(NavLink)`
+  font-size: 20px;
 
-    &.active {
-      color: pink;
-    }
-  `;
+  &.active {
+    color: pink;
+  }
+`;
 
+export default function SharedLayout() {
   return (
     <>
       <header className={css.header}>

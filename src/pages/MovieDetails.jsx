@@ -6,25 +6,26 @@ import AdditionalInfo from 'components/AdditionalInfo/AdditionalInfo';
 import styled from 'styled-components';
 import { Status } from '../services/pageStatus';
 
+const BackButton = styled(Link)`
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: black;
+
+  &:hover {
+    background-color: #ddd;
+    color: black;
+  }
+`;
+
 export default function MovieDetails() {
   const [status, setStatus] = useState(Status.LOADING);
   const [movie, setMovie] = useState({});
   const { movieId } = useParams();
   const location = useLocation();
   const backLink = useRef(location.state?.from ?? '/movies');
-  const BackButton = styled(Link)`
-    text-decoration: none;
-    display: block;
-    width: fit-content;
-    padding: 8px 16px;
-    background-color: #f1f1f1;
-    color: black;
-
-    &:hover {
-      background-color: #ddd;
-      color: black;
-    }
-  `;
 
   useEffect(() => {
     filmsAPI({ option: 'details', movieId })
