@@ -1,0 +1,15 @@
+.additionalInfo {
+  margin-top: 15px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}

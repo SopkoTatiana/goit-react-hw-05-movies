@@ -1,0 +1,16 @@
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reviewsListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.author {
+  font-size: 20px;
+  font-weight: 600;
+}

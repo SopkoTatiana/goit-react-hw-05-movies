@@ -1,0 +1,22 @@
+.castList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.castListItem {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 600;
+}
